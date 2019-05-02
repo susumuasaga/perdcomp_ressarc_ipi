@@ -23,6 +23,6 @@ describe('NotaFiscal', function () {
     await NotaFiscaltModel.deleteMany({});
     await NotaFiscaltModel.create(notasFiscais);
     const NotaFiscalDocs = await NotaFiscaltModel.find().exec();
-    expect(NotaFiscalDocs.length).toBe(5);
+    expect(NotaFiscalDocs.length).toBe(6);
   });
 });

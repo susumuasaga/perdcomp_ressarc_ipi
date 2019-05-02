@@ -53,6 +53,19 @@ export const participantes: Participante[] = [{
 export const notasFiscais: NotaFiscal[] = [{
   emitenteCNPJ: '11111111000191',
   num: 1,
+  serie: '0',
+  data: '01032018',
+  dataES: '01032018',
+  cfop: '1101',
+  total: 110000,
+  ipiDestacado: 10000,
+  ipiCredOuDeb: 10000,
+  codSituacao: 1,
+  paAno: 2018,
+  paMes: 4
+},{
+  emitenteCNPJ: '11111111000191',
+  num: 1,
   serie: '1',
   data: '01042018',
   dataES: '01042018',
