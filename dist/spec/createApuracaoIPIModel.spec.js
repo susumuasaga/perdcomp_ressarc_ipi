@@ -20,6 +20,6 @@ describe('ApuracaoIPI', function () {
         await ApuracaoIPItModel.deleteMany({});
         await ApuracaoIPItModel.create(testDB_1.apuracoesIPI);
         const ApuracaoIPIDocs = await ApuracaoIPItModel.find().exec();
-        expect(ApuracaoIPIDocs.length).toBe(1);
+        expect(ApuracaoIPIDocs.length).toBe(2);
     });
 });

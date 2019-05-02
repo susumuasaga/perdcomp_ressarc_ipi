@@ -29,6 +29,11 @@ exports.apuracoesIPI = [{
         paMes: 4,
         creditoNacional: 14762,
         debitoNacional: 10000,
+    }, {
+        paAno: 2018,
+        paMes: 7,
+        creditoNacional: 14762,
+        debitoNacional: 10000,
     }];
 exports.participantes = [{
         codigo: 'FOR000000001',

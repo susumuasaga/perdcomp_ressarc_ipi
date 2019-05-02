@@ -36,6 +36,11 @@ export const apuracoesIPI: ApuracaoIPI[] = [{
   paMes: 4,
   creditoNacional: 14762,
   debitoNacional: 10000,
+}, {
+  paAno: 2018,
+  paMes: 7,
+  creditoNacional: 14762,
+  debitoNacional: 10000,
 }];
 export const participantes: Participante[] = [{
   codigo: 'FOR000000001',

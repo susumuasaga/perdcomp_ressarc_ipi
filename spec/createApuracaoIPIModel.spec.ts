@@ -26,6 +26,6 @@ describe('ApuracaoIPI', function () {
     await ApuracaoIPItModel.create(apuracoesIPI);
     // retrieve James Hackett id
     const ApuracaoIPIDocs = await ApuracaoIPItModel.find().exec();
-    expect(ApuracaoIPIDocs.length).toBe(1);
+    expect(ApuracaoIPIDocs.length).toBe(2);
   });
 });
