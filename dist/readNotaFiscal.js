@@ -12,7 +12,8 @@ async function readNotaFiscal(entidade, participanteModel, fields) {
             .findOne({ codigo: fields[4] }).exec();
         emitenteCNPJ = participanteDoc.cnpj;
     }
-    return { emitenteCNPJ: emitenteCNPJ, num: fields[8], serie: fields[7],
+    return { emitenteCNPJ: emitenteCNPJ,
+        num: Number(fields[8]), serie: fields[7],
         data: fields[10],
         dataES: fields[11],
         codSituacao: Number(fields[6]),

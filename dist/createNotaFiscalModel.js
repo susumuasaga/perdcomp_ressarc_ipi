@@ -7,7 +7,7 @@ function createNotaFiscalModel() {
         paMes: { type: Number, required: true },
         cfop: { type: String, required: true },
         emitenteCNPJ: { type: String, required: true },
-        num: { type: String, required: true },
+        num: { type: Number, required: true },
         serie: { type: String, required: true },
         data: { type: String, required: true },
         dataES: { type: String, required: true },

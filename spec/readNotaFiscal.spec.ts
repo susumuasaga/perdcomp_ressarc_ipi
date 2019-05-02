@@ -30,7 +30,7 @@ describe('readNotaFiscal', () => {
     const notaFiscal = await readNotaFiscal(entidade, participanteModel,
                                             line.split('|'));
     expect(notaFiscal.emitenteCNPJ).toBe('00000000000191');
-    expect(notaFiscal.num).toBe('9028');
+    expect(notaFiscal.num).toBe(9028);
     expect(notaFiscal.serie).toBe('1');
     expect(notaFiscal.data).toBe('04042014');
     expect(notaFiscal.dataES).toBe('04042014');
@@ -45,7 +45,7 @@ describe('readNotaFiscal', () => {
                                              
                                             line.split('|'));
     expect(notaFiscal.emitenteCNPJ).toBe('11111111000191');
-    expect(notaFiscal.num).toBe('45255');
+    expect(notaFiscal.num).toBe(45255);
     expect(notaFiscal.serie).toBe('1');
     expect(notaFiscal.data).toBe('03042014');
     expect(notaFiscal.dataES).toBe('04042014');

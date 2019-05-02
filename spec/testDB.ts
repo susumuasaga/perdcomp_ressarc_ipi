@@ -52,7 +52,7 @@ export const participantes: Participante[] = [{
 }];
 export const notasFiscais: NotaFiscal[] = [{
   emitenteCNPJ: '11111111000191',
-  num: '1',
+  num: 1,
   serie: '1',
   data: '01042018',
   dataES: '01042018',
@@ -65,7 +65,7 @@ export const notasFiscais: NotaFiscal[] = [{
   paMes: 4
 }, {
   emitenteCNPJ: '11111111000191',
-  num: '2',
+  num: 2,
   serie: '1',
   data: '01042018',
   dataES: '01042018',
@@ -78,7 +78,7 @@ export const notasFiscais: NotaFiscal[] = [{
   paMes: 4
 }, {
   emitenteCNPJ: '11111111000191',
-  num: '3',
+  num: 3,
   serie: '1',
   data: '01042018',
   dataES: '01042018',
@@ -91,7 +91,7 @@ export const notasFiscais: NotaFiscal[] = [{
   paMes: 4
 }, {
   emitenteCNPJ: '22222222000191',
-  num: '1',
+  num: 1,
   serie: '1',
   data: '01042018',
   dataES: '01042018',
@@ -103,7 +103,7 @@ export const notasFiscais: NotaFiscal[] = [{
   paMes: 4
 }, {
   emitenteCNPJ: '00000000000191',
-  num: '1',
+  num: 1,
   serie: '1',
   data: '01042018',
   dataES: '01042018',

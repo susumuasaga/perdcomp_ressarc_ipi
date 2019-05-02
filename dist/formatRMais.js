@@ -16,3 +16,7 @@ function formatAAAA(n) {
     return numeral_1.default(n).format('0000');
 }
 exports.formatAAAA = formatAAAA;
+function formatXN(n) {
+    return numeral_1.default(n).format('000000000');
+}
+exports.formatXN = formatXN;

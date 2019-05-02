@@ -32,7 +32,7 @@ describe('readRegistro', () => {
     });
     it('can read and create registro analítico, credito importação', async () => {
         const notaFiscal = { emitenteCNPJ: '00000000000191',
-            num: '2', serie: '1',
+            num: 2, serie: '1',
             data: '01042014',
             dataES: '02042014',
             codSituacao: 0,
@@ -40,7 +40,7 @@ describe('readRegistro', () => {
         const line = '|C190|100|3101|18,00|9768,61|12860,41|2314,88|0,00|0,00|0,00|453,56||';
         const notaFiscalDoc = await readRegistroAnalitico_1.default(notaFiscalModel, apuracaoIPIModel, notaFiscal, line.split('|'));
         expect(notaFiscalDoc.emitenteCNPJ).toBe('00000000000191');
-        expect(notaFiscalDoc.num).toBe('2');
+        expect(notaFiscalDoc.num).toBe(2);
         expect(notaFiscalDoc.serie).toBe('1');
         expect(notaFiscalDoc.cfop).toBe('3101');
         expect(notaFiscalDoc.total).toBe(976861);
@@ -52,7 +52,7 @@ describe('readRegistro', () => {
     });
     it('can read and update registro analítico, credito nacional', async () => {
         const notaFiscal = { emitenteCNPJ: '11111111000191',
-            num: '1', serie: '1',
+            num: 1, serie: '1',
             data: '01042018',
             dataES: '01042018',
             codSituacao: 0,
@@ -60,7 +60,7 @@ describe('readRegistro', () => {
         const line = '|C190|100|1101|18,00|9768,61|12860,41|2314,88|0,00|0,00|0,00|453,56||';
         const notaFiscalDoc = await readRegistroAnalitico_1.default(notaFiscalModel, apuracaoIPIModel, notaFiscal, line.split('|'));
         expect(notaFiscalDoc.emitenteCNPJ).toBe('11111111000191');
-        expect(notaFiscalDoc.num).toBe('1');
+        expect(notaFiscalDoc.num).toBe(1);
         expect(notaFiscalDoc.serie).toBe('1');
         expect(notaFiscalDoc.cfop).toBe('1101');
         expect(notaFiscalDoc.total).toBe(1086861);
@@ -73,7 +73,7 @@ describe('readRegistro', () => {
     });
     it('can read and create registro analítico, credito extemporâneo', async () => {
         const notaFiscal = { emitenteCNPJ: '00000000000191',
-            num: '2', serie: '1',
+            num: 2, serie: '1',
             data: '01042014',
             dataES: '02042014',
             codSituacao: 1,
@@ -81,7 +81,7 @@ describe('readRegistro', () => {
         const line = '|C190|100|3101|18,00|9768,61|12860,41|2314,88|0,00|0,00|0,00|453,56||';
         const notaFiscalDoc = await readRegistroAnalitico_1.default(notaFiscalModel, apuracaoIPIModel, notaFiscal, line.split('|'));
         expect(notaFiscalDoc.emitenteCNPJ).toBe('00000000000191');
-        expect(notaFiscalDoc.num).toBe('2');
+        expect(notaFiscalDoc.num).toBe(2);
         expect(notaFiscalDoc.serie).toBe('1');
         expect(notaFiscalDoc.cfop).toBe('3101');
         expect(notaFiscalDoc.total).toBe(976861);
@@ -93,7 +93,7 @@ describe('readRegistro', () => {
     });
     it('can read and update registro analítico, debito nacional', async () => {
         const notaFiscal = { emitenteCNPJ: '00000000000191',
-            num: '1', serie: '1',
+            num: 1, serie: '1',
             data: '01042018',
             dataES: '01042018',
             codSituacao: 0,
@@ -101,7 +101,7 @@ describe('readRegistro', () => {
         const line = '|C190|000|5101|18,00|3522,75|3355,00|603,90|0,00|0,00|0,00|167,75||';
         const notaFiscalDoc = await readRegistroAnalitico_1.default(notaFiscalModel, apuracaoIPIModel, notaFiscal, line.split('|'));
         expect(notaFiscalDoc.emitenteCNPJ).toBe('00000000000191');
-        expect(notaFiscalDoc.num).toBe('1');
+        expect(notaFiscalDoc.num).toBe(1);
         expect(notaFiscalDoc.serie).toBe('1');
         expect(notaFiscalDoc.cfop).toBe('5101');
         expect(notaFiscalDoc.total).toBe(462275);
