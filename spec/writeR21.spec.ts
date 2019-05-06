@@ -2,7 +2,7 @@ import fs from 'fs';
 import mongoose from 'mongoose';
 import Entidade from '../Entidade';
 import writeR21 from '../writeR21';
-import { ApuracaoIPIModel, createApuracaoIPIModel } from '../createApuracaoIPIModel';
+import createApuracaoIPIModel, { ApuracaoIPIModel } from '../createApuracaoIPIModel';
 import { apuracoesIPI } from './testDB';
 
 describe('writeR21', () => {

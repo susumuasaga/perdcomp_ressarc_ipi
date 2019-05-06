@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import readNotaFiscal from '../readNotaFiscal';
 import { participantes } from './testDB';
-import { ParticipanteModel, createParticipanteModel } from '../createParticipanteModel';
+import createParticipanteModel, { ParticipanteModel } from '../createParticipanteModel';
 import Entidade from '../Entidade';
 
 describe('readNotaFiscal', () => {

@@ -13,7 +13,7 @@ export interface RegistroIPIDoc extends mongoose.Document {
 
 export type RegistroIPIModel = mongoose.Model<RegistroIPIDoc>;
 
-export function createRegistroIPIModel(): RegistroIPIModel {
+export default function createRegistroIPIModel(): RegistroIPIModel {
   const registroIPISchema = new mongoose.Schema({
     paAno: { type: Number, required: true },
     paMes: { type: Number, required: true },

@@ -29,6 +29,7 @@ export default async function readEfdIcmsIpi(
         crlfDelay: Infinity
     });
     for await (const line of rl) {
+        console.log('line =', line);
         const fields = line.split('|');
         switch (fields[1]) {
             case '0000':

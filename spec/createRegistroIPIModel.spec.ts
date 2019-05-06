@@ -1,5 +1,5 @@
 import mongoose = require('mongoose');
-import { RegistroIPIModel , createRegistroIPIModel }
+import createRegistroIPIModel, { RegistroIPIModel }
   from '../createRegistroIPIModel';
 import { registrosIPI } from './testDB';
 

@@ -18,7 +18,7 @@ export interface ApuracaoIPIDoc extends mongoose.Document {
 
 export type ApuracaoIPIModel = mongoose.Model<ApuracaoIPIDoc>;
 
-export function createApuracaoIPIModel(): ApuracaoIPIModel {
+export default function createApuracaoIPIModel(): ApuracaoIPIModel {
   const apuracaoIPISchema = new mongoose.Schema({
     paAno: { type: Number, required: true },
     paMes: { type: Number, required: true },

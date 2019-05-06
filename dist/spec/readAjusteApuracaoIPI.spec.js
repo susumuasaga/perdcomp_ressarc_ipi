@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const createApuracaoIPIModel_1 = require("../createApuracaoIPIModel");
+const createApuracaoIPIModel_1 = __importDefault(require("../createApuracaoIPIModel"));
 const testDB_1 = require("./testDB");
 const readAjusteApuracaoIPI_1 = __importDefault(require("../readAjusteApuracaoIPI"));
 describe('readRegistro', () => {
@@ -16,7 +16,7 @@ describe('readRegistro', () => {
             useFindAndModify: false,
             useCreateIndex: true
         });
-        apuracaoIPIModel = createApuracaoIPIModel_1.createApuracaoIPIModel();
+        apuracaoIPIModel = createApuracaoIPIModel_1.default();
         periodoApuracao = { ano: 2018, mes: 4 };
     });
     afterAll(async () => {

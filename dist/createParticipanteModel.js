@@ -9,4 +9,4 @@ function createParticipanteModel() {
     });
     return mongoose.model('Participante', participanteSchema);
 }
-exports.createParticipanteModel = createParticipanteModel;
+exports.default = createParticipanteModel;

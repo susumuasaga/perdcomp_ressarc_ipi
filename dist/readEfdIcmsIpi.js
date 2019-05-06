@@ -31,6 +31,7 @@ async function readEfdIcmsIpi(participanteModel, notaFiscalModel, apuracaoIPIMod
     try {
         for (var rl_1 = __asyncValues(rl), rl_1_1; rl_1_1 = await rl_1.next(), !rl_1_1.done;) {
             const line = rl_1_1.value;
+            console.log('line =', line);
             const fields = line.split('|');
             switch (fields[1]) {
                 case '0000':

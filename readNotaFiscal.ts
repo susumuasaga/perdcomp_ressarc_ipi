@@ -9,7 +9,7 @@ export default async function readNotaFiscal(
 ): Promise<NotaFiscal> {
     assert(fields[1] == 'C100', 'readNotaFiscal: Não é registro C100');
     let emitenteCNPJ: string;
-    if (fields[3] == '0') {
+    if (fields[3] == '0' || fields[4] == '') {
         emitenteCNPJ = entidade.cnpj;
     } else {
         const participanteDoc = await participanteModel

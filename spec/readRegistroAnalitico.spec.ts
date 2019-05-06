@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 import { notasFiscais, apuracoesIPI } from './testDB';
-import { NotaFiscalModel, createNotaFiscalModel } from '../createNotaFiscalModel';
+import createNotaFiscalModel, { NotaFiscalModel } from '../createNotaFiscalModel';
 import NotaFiscal from '../NotaFiscal';
 import readRegistroAnalitico from '../readRegistroAnalitico';
-import { ApuracaoIPIModel, createApuracaoIPIModel } from '../createApuracaoIPIModel';
+import createApuracaoIPIModel, { ApuracaoIPIModel } from '../createApuracaoIPIModel';
 import ApuracaoIPI from '../ApuracaoIPI';
 
 describe('readRegistro', () => {

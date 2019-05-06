@@ -1,7 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
-const createNotaFiscalModel_1 = require("../createNotaFiscalModel");
+const createNotaFiscalModel_1 = __importDefault(require("../createNotaFiscalModel"));
 const testDB_1 = require("./testDB");
 describe('NotaFiscal', function () {
     let NotaFiscaltModel;
@@ -10,7 +13,7 @@ describe('NotaFiscal', function () {
             useNewUrlParser: true,
             useCreateIndex: true
         });
-        NotaFiscaltModel = createNotaFiscalModel_1.createNotaFiscalModel();
+        NotaFiscaltModel = createNotaFiscalModel_1.default();
     });
     afterAll(function () {
         mongoose.models = {};

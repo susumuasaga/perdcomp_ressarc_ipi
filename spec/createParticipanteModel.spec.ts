@@ -1,5 +1,5 @@
 import mongoose = require('mongoose');
-import { ParticipanteModel , createParticipanteModel }
+import createParticipanteModel, { ParticipanteModel }
   from '../createParticipanteModel';
 import { participantes } from './testDB';
 

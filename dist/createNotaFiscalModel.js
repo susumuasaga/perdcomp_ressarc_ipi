@@ -8,7 +8,7 @@ function createNotaFiscalModel() {
         cfop: { type: String, required: true },
         emitenteCNPJ: { type: String, required: true },
         num: { type: Number, required: true },
-        serie: { type: String, required: true },
+        serie: { type: String },
         data: { type: String, required: true },
         dataES: { type: String, required: true },
         total: { type: Number, default: 0 },
@@ -20,4 +20,4 @@ function createNotaFiscalModel() {
     NotaFiscalSchema.index({ paAno: 1, paMes: 1 });
     return mongoose.model('NotaFiscal', NotaFiscalSchema);
 }
-exports.createNotaFiscalModel = createNotaFiscalModel;
+exports.default = createNotaFiscalModel;

@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
-import { NotaFiscalModel, createNotaFiscalModel } from "../createNotaFiscalModel";
-import { ApuracaoIPIModel, createApuracaoIPIModel } from "../createApuracaoIPIModel";
-import { ParticipanteModel, createParticipanteModel } from "../createParticipanteModel";
-import { RegistroIPIModel, createRegistroIPIModel } from "../createRegistroIPIModel";
+import createNotaFiscalModel, { NotaFiscalModel } from "../createNotaFiscalModel";
+import createApuracaoIPIModel, { ApuracaoIPIModel } from "../createApuracaoIPIModel";
+import createParticipanteModel, { ParticipanteModel } from "../createParticipanteModel";
+import createRegistroIPIModel, { RegistroIPIModel } from "../createRegistroIPIModel";
 import readEfdIcmsIpi from '../readEfdIcmsIpi';
 
 describe('read efd icms ipi', () => {

@@ -1,7 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
-const createApuracaoIPIModel_1 = require("../createApuracaoIPIModel");
+const createApuracaoIPIModel_1 = __importDefault(require("../createApuracaoIPIModel"));
 const testDB_1 = require("./testDB");
 describe('ApuracaoIPI', function () {
     let ApuracaoIPItModel;
@@ -10,7 +13,7 @@ describe('ApuracaoIPI', function () {
             useNewUrlParser: true,
             useCreateIndex: true
         });
-        ApuracaoIPItModel = createApuracaoIPIModel_1.createApuracaoIPIModel();
+        ApuracaoIPItModel = createApuracaoIPIModel_1.default();
     });
     afterAll(function () {
         mongoose.models = {};

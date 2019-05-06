@@ -1,5 +1,5 @@
 import mongoose = require('mongoose');
-import { ApuracaoIPIModel , createApuracaoIPIModel }
+import createApuracaoIPIModel, { ApuracaoIPIModel }
   from '../createApuracaoIPIModel';
 import { apuracoesIPI } from './testDB';
 

@@ -14,4 +14,4 @@ function createRegistroIPIModel() {
     registroIPISchema.index({ paAno: 1, paMes: 1, cfop: 1 }, { unique: true });
     return mongoose.model('RegistroIPI', registroIPISchema);
 }
-exports.createRegistroIPIModel = createRegistroIPIModel;
+exports.default = createRegistroIPIModel;

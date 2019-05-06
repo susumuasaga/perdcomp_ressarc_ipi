@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const testDB_1 = require("./testDB");
-const createNotaFiscalModel_1 = require("../createNotaFiscalModel");
+const createNotaFiscalModel_1 = __importDefault(require("../createNotaFiscalModel"));
 const readRegistroAnalitico_1 = __importDefault(require("../readRegistroAnalitico"));
-const createApuracaoIPIModel_1 = require("../createApuracaoIPIModel");
+const createApuracaoIPIModel_1 = __importDefault(require("../createApuracaoIPIModel"));
 describe('readRegistro', () => {
     let notaFiscalModel;
     let apuracaoIPIModel;
@@ -17,8 +17,8 @@ describe('readRegistro', () => {
             useFindAndModify: false,
             useCreateIndex: true
         });
-        notaFiscalModel = createNotaFiscalModel_1.createNotaFiscalModel();
-        apuracaoIPIModel = createApuracaoIPIModel_1.createApuracaoIPIModel();
+        notaFiscalModel = createNotaFiscalModel_1.default();
+        apuracaoIPIModel = createApuracaoIPIModel_1.default();
     });
     afterAll(async () => {
         mongoose_1.default.models = {};

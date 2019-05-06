@@ -19,4 +19,4 @@ function createApuracaoIPIModel() {
     apuracaoIPISchema.index({ paAno: 1, paMes: 1 }, { unique: true });
     return mongoose.model('ApuracaoIPI', apuracaoIPISchema);
 }
-exports.createApuracaoIPIModel = createApuracaoIPIModel;
+exports.default = createApuracaoIPIModel;

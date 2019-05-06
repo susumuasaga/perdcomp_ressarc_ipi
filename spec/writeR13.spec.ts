@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import fs from 'fs';
-import { NotaFiscalModel, createNotaFiscalModel } from "../createNotaFiscalModel";
+import createNotaFiscalModel, { NotaFiscalModel } from "../createNotaFiscalModel";
 import { notasFiscais } from './testDB';
 import Entidade from '../Entidade';
 import writeR13 from '../writeR13';

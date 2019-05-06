@@ -23,7 +23,9 @@ async function readRegistroIPI(registroIPIModel, periodoApuracao, fields) {
     registroIPIDoc.baseCalc += baseCalc;
     registroIPIDoc.ipi += ipi;
     if (!isentaNaoTrib) {
-        registroIPIDoc.outras += valorContabil - (baseCalc + ipi);
+        if (valorContabil >= baseCalc + ipi) {
+            registroIPIDoc.outras += valorContabil - (baseCalc + ipi);
+        }
     }
     else {
         registroIPIDoc.isentasNaoTrib += valorContabil - (baseCalc + ipi);

@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const createRegistroIPIModel_1 = require("../createRegistroIPIModel");
+const createRegistroIPIModel_1 = __importDefault(require("../createRegistroIPIModel"));
 const testDB_1 = require("./testDB");
 const writeR11_1 = __importDefault(require("../writeR11"));
 describe('writeR11', () => {
@@ -16,7 +16,7 @@ describe('writeR11', () => {
             useFindAndModify: false,
             useCreateIndex: true
         });
-        registroIPIModel = createRegistroIPIModel_1.createRegistroIPIModel();
+        registroIPIModel = createRegistroIPIModel_1.default();
     });
     afterAll(async () => {
         mongoose_1.default.models = {};

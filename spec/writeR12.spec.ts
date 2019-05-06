@@ -1,6 +1,6 @@
 import fs from 'fs';
 import mongoose from 'mongoose';
-import { RegistroIPIModel, createRegistroIPIModel } from "../createRegistroIPIModel";
+import createRegistroIPIModel, { RegistroIPIModel } from "../createRegistroIPIModel";
 import { registrosIPI } from './testDB';
 import Entidade from '../Entidade';
 import writeR12 from '../writeR12';

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { RegistroIPIModel, createRegistroIPIModel } from "../createRegistroIPIModel";
+import createRegistroIPIModel, { RegistroIPIModel } from "../createRegistroIPIModel";
 import { registrosIPI } from './testDB';
 import readRegistroIPI from '../readRegistroIPI';
 import PeriodoApuracao from '../PeriodoApuracao';

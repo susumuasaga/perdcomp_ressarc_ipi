@@ -4,7 +4,7 @@ const assert = require("assert");
 async function readNotaFiscal(entidade, participanteModel, fields) {
     assert(fields[1] == 'C100', 'readNotaFiscal: Não é registro C100');
     let emitenteCNPJ;
-    if (fields[3] == '0') {
+    if (fields[3] == '0' || fields[4] == '') {
         emitenteCNPJ = entidade.cnpj;
     }
     else {

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const readNotaFiscal_1 = __importDefault(require("../readNotaFiscal"));
 const testDB_1 = require("./testDB");
-const createParticipanteModel_1 = require("../createParticipanteModel");
+const createParticipanteModel_1 = __importDefault(require("../createParticipanteModel"));
 describe('readNotaFiscal', () => {
     let participanteModel;
     let entidade;
@@ -17,7 +17,7 @@ describe('readNotaFiscal', () => {
             useNewUrlParser: true,
             useCreateIndex: true
         });
-        participanteModel = createParticipanteModel_1.createParticipanteModel();
+        participanteModel = createParticipanteModel_1.default();
         await participanteModel.deleteMany({});
         await participanteModel.create(testDB_1.participantes);
     });

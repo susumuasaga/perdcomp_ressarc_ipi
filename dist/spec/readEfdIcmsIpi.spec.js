@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const createNotaFiscalModel_1 = require("../createNotaFiscalModel");
-const createApuracaoIPIModel_1 = require("../createApuracaoIPIModel");
-const createParticipanteModel_1 = require("../createParticipanteModel");
-const createRegistroIPIModel_1 = require("../createRegistroIPIModel");
+const createNotaFiscalModel_1 = __importDefault(require("../createNotaFiscalModel"));
+const createApuracaoIPIModel_1 = __importDefault(require("../createApuracaoIPIModel"));
+const createParticipanteModel_1 = __importDefault(require("../createParticipanteModel"));
+const createRegistroIPIModel_1 = __importDefault(require("../createRegistroIPIModel"));
 const readEfdIcmsIpi_1 = __importDefault(require("../readEfdIcmsIpi"));
 describe('read efd icms ipi', () => {
     let participanteModel;
@@ -20,10 +20,10 @@ describe('read efd icms ipi', () => {
             useFindAndModify: false,
             useCreateIndex: true
         });
-        participanteModel = createParticipanteModel_1.createParticipanteModel();
-        notaFiscalModel = createNotaFiscalModel_1.createNotaFiscalModel();
-        apuracaoIPIModel = createApuracaoIPIModel_1.createApuracaoIPIModel();
-        registroIPIModel = createRegistroIPIModel_1.createRegistroIPIModel();
+        participanteModel = createParticipanteModel_1.default();
+        notaFiscalModel = createNotaFiscalModel_1.default();
+        apuracaoIPIModel = createApuracaoIPIModel_1.default();
+        registroIPIModel = createRegistroIPIModel_1.default();
     });
     afterAll(async () => {
         mongoose_1.default.models = {};

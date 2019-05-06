@@ -1,5 +1,5 @@
 import mongoose = require('mongoose');
-import { NotaFiscalModel , createNotaFiscalModel }
+import createNotaFiscalModel, { NotaFiscalModel }
   from '../createNotaFiscalModel';
 import { notasFiscais } from './testDB';
 

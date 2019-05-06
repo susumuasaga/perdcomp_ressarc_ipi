@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const createParticipanteModel_1 = require("../createParticipanteModel");
+const createParticipanteModel_1 = __importDefault(require("../createParticipanteModel"));
 const readParticipante_1 = __importDefault(require("../readParticipante"));
 const testDB_1 = require("./testDB");
 describe('readParticipante', () => {
@@ -15,7 +15,7 @@ describe('readParticipante', () => {
             useFindAndModify: false,
             useCreateIndex: true
         });
-        participanteModel = createParticipanteModel_1.createParticipanteModel();
+        participanteModel = createParticipanteModel_1.default();
         await participanteModel.deleteMany({});
         await participanteModel.create(testDB_1.participantes);
     });

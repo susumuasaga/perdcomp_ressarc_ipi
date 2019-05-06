@@ -18,14 +18,14 @@ export interface NotaFiscalDoc extends mongoose.Document {
 
 export type NotaFiscalModel = mongoose.Model<NotaFiscalDoc>;
 
-export function createNotaFiscalModel(): NotaFiscalModel {
+export default function createNotaFiscalModel(): NotaFiscalModel {
   const NotaFiscalSchema = new mongoose.Schema({
     paAno: { type: Number, required: true },
     paMes: { type: Number, required: true },
     cfop: { type: String, required: true },
     emitenteCNPJ: { type: String, required: true },
     num: { type: Number, required: true },
-    serie: { type: String, required: true },
+    serie: { type: String },
     data: { type: String, required: true },
     dataES: { type: String, required: true },
     total: { type: Number, default: 0 },

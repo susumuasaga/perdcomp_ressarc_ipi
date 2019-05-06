@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const writeR21_1 = __importDefault(require("../writeR21"));
-const createApuracaoIPIModel_1 = require("../createApuracaoIPIModel");
+const createApuracaoIPIModel_1 = __importDefault(require("../createApuracaoIPIModel"));
 const testDB_1 = require("./testDB");
 describe('writeR21', () => {
     let apuracaoIPIModel;
@@ -16,7 +16,7 @@ describe('writeR21', () => {
             useFindAndModify: false,
             useCreateIndex: true
         });
-        apuracaoIPIModel = createApuracaoIPIModel_1.createApuracaoIPIModel();
+        apuracaoIPIModel = createApuracaoIPIModel_1.default();
     });
     afterAll(async () => {
         mongoose_1.default.models = {};

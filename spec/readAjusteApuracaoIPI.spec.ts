@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { ApuracaoIPIModel, createApuracaoIPIModel } from "../createApuracaoIPIModel";
+import createApuracaoIPIModel, { ApuracaoIPIModel } from "../createApuracaoIPIModel";
 import { apuracoesIPI } from './testDB';
 import PeriodoApuracao from '../PeriodoApuracao';
 import readAjusteApuracaoIPI from '../readAjusteApuracaoIPI';

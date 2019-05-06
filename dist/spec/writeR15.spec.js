@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const fs_1 = __importDefault(require("fs"));
-const createNotaFiscalModel_1 = require("../createNotaFiscalModel");
+const createNotaFiscalModel_1 = __importDefault(require("../createNotaFiscalModel"));
 const testDB_1 = require("./testDB");
 const writeR15_1 = __importDefault(require("../writeR15"));
 describe('writeR15', () => {
@@ -16,7 +16,7 @@ describe('writeR15', () => {
             useFindAndModify: false,
             useCreateIndex: true
         });
-        notaFiscalModel = createNotaFiscalModel_1.createNotaFiscalModel();
+        notaFiscalModel = createNotaFiscalModel_1.default();
     });
     afterAll(async () => {
         mongoose_1.default.models = {};

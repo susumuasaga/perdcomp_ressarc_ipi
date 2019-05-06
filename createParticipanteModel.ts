@@ -9,7 +9,7 @@ export interface ParticipanteDoc extends mongoose.Document {
 
 export type ParticipanteModel = mongoose.Model<ParticipanteDoc>;
 
-export function createParticipanteModel(): ParticipanteModel {
+export default function createParticipanteModel(): ParticipanteModel {
   const participanteSchema = new mongoose.Schema({
     codigo: { type: String, unique: true },
     cnpj: { type: String, index: true },
