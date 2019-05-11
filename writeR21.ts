@@ -10,9 +10,10 @@ export default async function writeR11(
   const paAno = entidade.paAno;
   const paMes = entidade.paMes;
   const cnpj = entidade.cnpj;
-  const apuracaoIPIDocs = await apuracaoIPIModel.find()
-                          .where('paAno').equals(paAno)
-                          .where('paMes').gte(paMes+3)
+  const apuracaoIPIDocs = await apuracaoIPIModel
+                          .find({ $or: [{ paAno: { $gt: paAno } },
+                                        { paAno: paAno,
+                                          paMes: { $gte: paMes+3 } }] })
                           .sort({ paAno: 1, paMes: 1 });
   const out = fs.createWriteStream(`R21${formatAAAA(paAno)}${formatMM(paMes)}.txt`);
   const writeAsync = util.promisify(out.write).bind(out);

@@ -17,9 +17,10 @@ async function writeR11(apuracaoIPIModel, entidade) {
     const paAno = entidade.paAno;
     const paMes = entidade.paMes;
     const cnpj = entidade.cnpj;
-    const apuracaoIPIDocs = await apuracaoIPIModel.find()
-        .where('paAno').equals(paAno)
-        .where('paMes').gte(paMes + 3)
+    const apuracaoIPIDocs = await apuracaoIPIModel
+        .find({ $or: [{ paAno: { $gt: paAno } },
+            { paAno: paAno,
+                paMes: { $gte: paMes + 3 } }] })
         .sort({ paAno: 1, paMes: 1 });
     const out = fs_1.default.createWriteStream(`R21${formatRMais_1.formatAAAA(paAno)}${formatRMais_1.formatMM(paMes)}.txt`);
     const writeAsync = util_1.default.promisify(out.write).bind(out);
