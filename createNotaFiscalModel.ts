@@ -3,6 +3,7 @@ import mongoose = require('mongoose');
 export interface NotaFiscalDoc extends mongoose.Document {
   _id: mongoose.Types.ObjectId;
   emitenteCNPJ: string;
+  participanteCNPJ: string;
   num: number;
   serie: string;
   cfop: string;
@@ -24,6 +25,7 @@ export default function createNotaFiscalModel(): NotaFiscalModel {
     paMes: { type: Number, required: true },
     cfop: { type: String, required: true },
     emitenteCNPJ: { type: String, required: true },
+    participanteCNPJ: { type: String, index: true },
     num: { type: Number, required: true },
     serie: { type: String },
     data: { type: String, required: true },

@@ -32,6 +32,7 @@ describe('readRegistro', () => {
     });
     it('can read and create registro analítico, credito importação', async () => {
         const notaFiscal = { emitenteCNPJ: '00000000000191',
+            participanteCNPJ: '11111111000191',
             num: 2, serie: '1',
             data: '01042014',
             dataES: '02042014',
@@ -52,6 +53,7 @@ describe('readRegistro', () => {
     });
     it('can read and update registro analítico, credito nacional', async () => {
         const notaFiscal = { emitenteCNPJ: '11111111000191',
+            participanteCNPJ: '11111111000191',
             num: 1, serie: '1',
             data: '01042018',
             dataES: '01042018',
@@ -73,6 +75,7 @@ describe('readRegistro', () => {
     });
     it('can read and create registro analítico, credito extemporâneo', async () => {
         const notaFiscal = { emitenteCNPJ: '00000000000191',
+            participanteCNPJ: '11111111000191',
             num: 2, serie: '1',
             data: '01042014',
             dataES: '02042014',
@@ -93,6 +96,7 @@ describe('readRegistro', () => {
     });
     it('can read and update registro analítico, debito nacional', async () => {
         const notaFiscal = { emitenteCNPJ: '00000000000191',
+            participanteCNPJ: '11111111000191',
             num: 1, serie: '1',
             data: '01042018',
             dataES: '01042018',

@@ -50,6 +50,7 @@ exports.participantes = [{
     }];
 exports.notasFiscais = [{
         emitenteCNPJ: '11111111000191',
+        participanteCNPJ: '11111111000191',
         num: 1,
         serie: '0',
         data: '01032018',
@@ -63,6 +64,7 @@ exports.notasFiscais = [{
         paMes: 4
     }, {
         emitenteCNPJ: '11111111000191',
+        participanteCNPJ: '11111111000191',
         num: 1,
         serie: '1',
         data: '01042018',
@@ -76,6 +78,7 @@ exports.notasFiscais = [{
         paMes: 4
     }, {
         emitenteCNPJ: '11111111000191',
+        participanteCNPJ: '11111111000191',
         num: 2,
         serie: '1',
         data: '01042018',
@@ -89,6 +92,7 @@ exports.notasFiscais = [{
         paMes: 4
     }, {
         emitenteCNPJ: '11111111000191',
+        participanteCNPJ: '11111111000191',
         num: 3,
         serie: '1',
         data: '01042018',
@@ -102,6 +106,7 @@ exports.notasFiscais = [{
         paMes: 4
     }, {
         emitenteCNPJ: '22222222000191',
+        participanteCNPJ: '22222222000191',
         num: 1,
         serie: '1',
         data: '01042018',
@@ -114,6 +119,7 @@ exports.notasFiscais = [{
         paMes: 4
     }, {
         emitenteCNPJ: '00000000000191',
+        participanteCNPJ: '22222222000191',
         num: 1,
         serie: '1',
         data: '01042018',

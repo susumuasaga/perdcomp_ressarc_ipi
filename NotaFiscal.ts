@@ -1,6 +1,7 @@
 interface NotaFiscal {
     _id?: string;
     emitenteCNPJ: string;
+    participanteCNPJ: string;
     num: number;
     serie: string;
     cfop?: string;

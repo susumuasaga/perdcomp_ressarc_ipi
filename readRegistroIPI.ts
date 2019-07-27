@@ -10,7 +10,7 @@ export default async function readRegistroIPI(
 ): Promise<RegistroIPIDoc> {
     assert(fields[1] == 'E510', 'readRegistroIPI: Não é registro E510');
     const cfop = fields[2];
-    const isentaNaoTrib = (new Set(['02', '03', '04', '52', '53', '54']))
+    const isentaNaoTrib = (new Set(['02', '03', '52', '53']))
                           .has(fields[3]);
     const valorContabil = strToInt(fields[4]);
     const baseCalc = strToInt(fields[5]);

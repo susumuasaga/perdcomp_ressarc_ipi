@@ -48,3 +48,31 @@ function writeAll(ano, mes) {
     writeR15(notaFiscalModel, entidade);
     writeR21(apuracaoIPIModel, entidade);
 }
+
+fs = require('fs');
+util = require('util');
+
+async function writeNFNT() {
+  const notaFiscalDocs = await (notaFiscalModel
+                                .find({ participanteCNPJ: '11137711000129' })
+                                .exec())
+  const out = fs.createWriteStream('NFsNT.txt');
+  const writeAsync = util.promisify(out.write).bind(out);
+  const endAsync = util.promisify(out.end).bind(out);
+  for (let i = 0; i < notaFiscalDocs.length; i++) {
+    const d = notaFiscalDocs[i];
+    await writeAsync(`${d.num},`);
+    await writeAsync(`${d.serie},`);
+    await writeAsync(
+        `${d.data.substring(4)}-${d.data.substring(2, 4)}-${d.data.substring(0, 2)},`
+    );
+    await writeAsync(
+        `${d.dataES.substring(4)}-${d.dataES.substring(2, 4)}-${d.dataES.substring(0, 2)},`
+    );
+    await writeAsync(`${d.cfop},`);
+    await writeAsync(`${d.total/100},`);
+    await writeAsync(`${d.ipiCredOuDeb/100}`);
+    await writeAsync('\r\n');
+  }
+  await endAsync();
+}
