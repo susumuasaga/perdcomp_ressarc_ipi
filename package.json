@@ -14,7 +14,7 @@
   "author": "Edson Susumu Asaga",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.5.0",
+    "mongoose": "^5.7.5",
     "numeral": "^2.0.6"
   },
   "devDependencies": {
