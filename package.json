@@ -14,19 +14,19 @@
   "author": "Edson Susumu Asaga",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.5.0",
+    "mongoose": "^5.8.10",
     "numeral": "^2.0.6"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.11",
-    "@types/mongoose": "^5.3.25",
-    "@types/numeral": "0.0.25",
-    "gulp": "^4.0.0",
-    "gulp-jest": "^4.0.2",
+    "@types/jest": "^25.1.0",
+    "@types/mongoose": "^5.5.43",
+    "@types/numeral": "^0.0.26",
+    "gulp": "^4.0.2",
+    "gulp-jest": "^4.0.3",
     "gulp-plumber": "^1.2.1",
-    "gulp-typescript": "^5.0.1",
-    "jest": "^24.7.1",
-    "jest-cli": "^24.7.1",
-    "typescript": "^3.4.3"
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "typescript": "^3.7.5"
   }
 }
